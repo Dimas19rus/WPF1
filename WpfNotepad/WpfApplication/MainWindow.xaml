@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication"
+       mc:Ignorable="d"
+        Title="Notepad" Height="350" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="TextBox"  Language ="ru-Ru" Margin="5,25,5,5" />
+        <Menu x:Name="Menu"  VerticalAlignment="Top" HorizontalAlignment="Left"  >
+            <MenuItem Header="File">
+                <MenuItem Header="Open" HorizontalAlignment="Left" Width="139.2" Click="Open_OnClick"/>
+                <MenuItem Header="Save" HorizontalAlignment="Left" Width="139.2" Click="Save_OnClick"/>
+                <MenuItem Header="Save as..." HorizontalAlignment="Left" Width="139.2" Click="SaveAs_OnClick"/>
+            </MenuItem>
+            <MenuItem Header="Functions">
+                <MenuItem Header="Undo" HorizontalAlignment="Left" Width="139.2" Click="Undo_OnClick"/>
+                <MenuItem Header="Redo" HorizontalAlignment="Left" Width="139.2" Click="Redo_OnClick"/>
+                <MenuItem Header="Copy" HorizontalAlignment="Left" Width="139.2" Click="Copy_OnClick"/>
+                <MenuItem Header="Cut" HorizontalAlignment="Left" Width="139.2" Click="Cut_OnClick"/>
+                <MenuItem Header="Pastle" HorizontalAlignment="Left" Width="139.2" Click="Pastle_OnClick"/>
+                <MenuItem Header="Select all" HorizontalAlignment="Left" Width="139.2" Click="SelectAll_OnClick"/>
+            </MenuItem>
+            <MenuItem Header="Settings" >
+                <CheckBox x:Name="CheckBox" Content="Hyphenation" Width="80" Click="Hyphenation_OnClick" />
+                <CheckBox x:Name="CheckBox1" Content="Spelling" Width="80" Click="Spelling_OnClick" />
+                <TextBlock x:Name="TextBlock" Text="Language spelling:" TextWrapping="Wrap"/>
+                <ComboBox x:Name="ComboBox" SelectedIndex="0" >
+                    <ComboBoxItem Content="Russian" HorizontalAlignment="Left" Selected="ComboBoxItem_Selected" />
+                    <ComboBoxItem Content="English" HorizontalAlignment="Left" Selected="ComboBoxItem_Selected_1" />
+                </ComboBox>
+
+            </MenuItem>
+        </Menu>
+        <Button x:Name="Button" Content = "End" Click="End_OnClick"  Margin="0,2,2,0" HorizontalAlignment="Right" Width="25" Height="17" VerticalAlignment="Top" />
+    </Grid>
+</Window>
